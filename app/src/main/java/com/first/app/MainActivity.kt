@@ -5,6 +5,9 @@ import android.os.Bundle
 import android.view.View
 import android.widget.EditText
 import android.widget.Toast
+import android.content.Intent
+import android.net.Uri
+
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -13,7 +16,13 @@ class MainActivity : AppCompatActivity() {
         supportActionBar?.hide()
     }
 
-    fun onButtonClick(view:View){
+    fun onForgetPwdClick(view: View) {
+        val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse("http://www.google.com"))
+        startActivity(browserIntent)
+    }
 
+    fun onSignInClick(view: View) {
+        val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/jasonChen0604/android-sample"))
+        startActivity(browserIntent)
     }
 }
