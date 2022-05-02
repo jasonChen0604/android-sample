@@ -10,15 +10,10 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        supportActionBar?.hide()
     }
 
     fun onButtonClick(view:View){
-        val editTextAccount = findViewById<EditText>(R.id.editTextAccount)
-        val editTextPassword = findViewById<EditText>(R.id.editTextPassword)
 
-        val account = editTextAccount.text
-        val password = editTextPassword.text
-
-        Toast.makeText(this, "$account / $password",Toast.LENGTH_SHORT).show()
     }
 }
